@@ -4,12 +4,17 @@ import '../styles/AnimationPanel.scss'
 
 class AnimationPanel extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
-    let scene = new THREE.Scene();
-    let camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-    let renderer = new THREE.WebGLRenderer();
-    renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
-    this.mount.appendChild(renderer.domElement);
+    this.isPlaying = false;
+    this.scene = new THREE.Scene();
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    this.renderer = new THREE.WebGLRenderer();
+    this.renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
+    this.mount.appendChild(this.renderer.domElement);
     let material = new THREE.LineBasicMaterial({
       color: 0xfd44f5,
     });
@@ -25,19 +30,21 @@ class AnimationPanel extends React.Component {
     for (let i = 0; i < 40; i++) {
       const line = new THREE.Line(geometry, material);
       if (i < 20) {
-        line.rotateY(0.07 * i);
+        line.rotateX(0.07 * i);
       } else {
-        line.rotateY(-0.07 * (i - 20));
+        line.rotateX(-0.07 * (i - 20));
       }
       lines.push(line);
       angleDeltas.push(0.02);
-      scene.add(line);
+      this.scene.add(line);
     }
-    camera.position.z = 10;
-    let animate = function () {
-      requestAnimationFrame( animate );
+    this.camera.position.z = 10;
+    this.animate = () => {
+      if (!this.isPlaying) {
+        return;
+      }
+      requestAnimationFrame(this.animate);
       lines.forEach((line, index) => {
-        console.log(index);
         if (line.rotation.y > 1.6) {
           angleDeltas[index] = -(angleDeltas[index]);
         }
@@ -46,14 +53,25 @@ class AnimationPanel extends React.Component {
         }
         line.rotation.y += angleDeltas[index];
       });
-      renderer.render( scene, camera );
+      this.renderer.render( this.scene, this.camera );
     };
-    animate();
   }
+
+  play = () => {
+    this.isPlaying = !this.isPlaying;
+    this.animate();
+  };
+
+
 
   render() {
     return (
-      <div className="AnimationPanel" ref={ref => (this.mount = ref)}/>
+      <div className="AnimationPanel">
+        <div ref={ref => (this.mount = ref)} />
+        <button onClick={this.play}>
+          play
+        </button>
+      </div>
     );
   }
 }

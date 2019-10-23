@@ -102,54 +102,68 @@ module.exports =
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! three */ "three");
-/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _styles_AnimationPanel_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles/AnimationPanel.scss */ "./styles/AnimationPanel.scss");
-/* harmony import */ var _styles_AnimationPanel_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_AnimationPanel_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three */ "three");
+/* harmony import */ var three__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(three__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _styles_AnimationPanel_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/AnimationPanel.scss */ "./styles/AnimationPanel.scss");
+/* harmony import */ var _styles_AnimationPanel_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_AnimationPanel_scss__WEBPACK_IMPORTED_MODULE_3__);
+
 var _jsxFileName = "C:\\Users\\elvin\\Development\\spotify-visual-creator\\components\\AnimationPanel.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 
 
-class AnimationPanel extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+class AnimationPanel extends react__WEBPACK_IMPORTED_MODULE_2___default.a.Component {
+  constructor(props) {
+    super(props);
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(this, "play", () => {
+      this.isPlaying = !this.isPlaying;
+      this.animate();
+    });
+  }
+
   componentDidMount() {
-    let scene = new three__WEBPACK_IMPORTED_MODULE_0__["Scene"]();
-    let camera = new three__WEBPACK_IMPORTED_MODULE_0__["PerspectiveCamera"](75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    let renderer = new three__WEBPACK_IMPORTED_MODULE_0__["WebGLRenderer"]();
-    renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
-    this.mount.appendChild(renderer.domElement);
-    let material = new three__WEBPACK_IMPORTED_MODULE_0__["LineBasicMaterial"]({
+    this.isPlaying = false;
+    this.scene = new three__WEBPACK_IMPORTED_MODULE_1__["Scene"]();
+    this.camera = new three__WEBPACK_IMPORTED_MODULE_1__["PerspectiveCamera"](75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    this.renderer = new three__WEBPACK_IMPORTED_MODULE_1__["WebGLRenderer"]();
+    this.renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
+    this.mount.appendChild(this.renderer.domElement);
+    let material = new three__WEBPACK_IMPORTED_MODULE_1__["LineBasicMaterial"]({
       color: 0xfd44f5
     });
-    let geometry = new three__WEBPACK_IMPORTED_MODULE_0__["Geometry"]();
-    geometry.vertices.push(new three__WEBPACK_IMPORTED_MODULE_0__["Vector3"](0, 0.5, 10), new three__WEBPACK_IMPORTED_MODULE_0__["Vector3"](0, 0, 0));
+    let geometry = new three__WEBPACK_IMPORTED_MODULE_1__["Geometry"]();
+    geometry.vertices.push(new three__WEBPACK_IMPORTED_MODULE_1__["Vector3"](0, 0.5, 10), new three__WEBPACK_IMPORTED_MODULE_1__["Vector3"](0, 0, 0));
     let angleDeltas = [];
     let lines = [];
 
     for (let i = 0; i < 40; i++) {
-      const line = new three__WEBPACK_IMPORTED_MODULE_0__["Line"](geometry, material);
+      const line = new three__WEBPACK_IMPORTED_MODULE_1__["Line"](geometry, material);
 
       if (i < 20) {
-        line.rotateY(0.07 * i);
+        line.rotateX(0.07 * i);
       } else {
-        line.rotateY(-0.07 * (i - 20));
+        line.rotateX(-0.07 * (i - 20));
       }
 
       lines.push(line);
       angleDeltas.push(0.02);
-      scene.add(line);
+      this.scene.add(line);
     }
 
-    camera.position.z = 10;
+    this.camera.position.z = 10;
 
-    let animate = function () {
-      requestAnimationFrame(animate);
+    this.animate = () => {
+      if (!this.isPlaying) {
+        return;
+      }
+
+      requestAnimationFrame(this.animate);
       lines.forEach((line, index) => {
-        console.log(index);
-
         if (line.rotation.y > 1.6) {
           angleDeltas[index] = -angleDeltas[index];
         }
@@ -160,22 +174,33 @@ class AnimationPanel extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compon
 
         line.rotation.y += angleDeltas[index];
       });
-      renderer.render(scene, camera);
+      this.renderer.render(this.scene, this.camera);
     };
-
-    animate();
   }
 
   render() {
     return __jsx("div", {
       className: "AnimationPanel",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }, __jsx("div", {
       ref: ref => this.mount = ref,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 70
       },
       __self: this
-    });
+    }), __jsx("button", {
+      onClick: this.play,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 71
+      },
+      __self: this
+    }, "play"));
   }
 
 }
