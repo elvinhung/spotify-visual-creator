@@ -1,0 +1,128 @@
+{
+  "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/Index.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/AnimationPanel.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/SelectionPanel.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/SelectionPanel.scss 0": 0,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/AnimationPanel.scss 0": 1,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/Index.scss 0": 2
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/runtime/main.js": 2,
+      "static\\TgWB5P8imuN9_UV1ihkEx\\pages\\_app.js": 3,
+      "static\\TgWB5P8imuN9_UV1ihkEx\\pages\\_error.js": 4,
+      "static\\TgWB5P8imuN9_UV1ihkEx\\pages\\index.js": 5,
+      "styles": 6,
+      "static\\pJUJCTUSTFhHkP062_8Hn\\pages\\_app.js": 7,
+      "static\\pJUJCTUSTFhHkP062_8Hn\\pages\\_error.js": 8,
+      "static\\pJUJCTUSTFhHkP062_8Hn\\pages\\index.js": 9,
+      "static\\wXCvMKq6fwOKhWW-ys0_c\\pages\\_app.js": 3,
+      "static\\wXCvMKq6fwOKhWW-ys0_c\\pages\\_error.js": 4,
+      "static\\wXCvMKq6fwOKhWW-ys0_c\\pages\\index.js": 5,
+      "static\\VWB0WuUXfdqPjEHCEGIHd\\pages\\_app.js": 7,
+      "static\\VWB0WuUXfdqPjEHCEGIHd\\pages\\_error.js": 8,
+      "static\\VWB0WuUXfdqPjEHCEGIHd\\pages\\index.js": 9,
+      "static\\hq0wRxzXyT-uItltLubVC\\pages\\_app.js": 3,
+      "static\\hq0wRxzXyT-uItltLubVC\\pages\\_error.js": 4,
+      "static\\hq0wRxzXyT-uItltLubVC\\pages\\index.js": 5,
+      "static\\I9bf1rFt9d6kApPEs-f96\\pages\\_app.js": 7,
+      "static\\I9bf1rFt9d6kApPEs-f96\\pages\\_error.js": 8,
+      "static\\I9bf1rFt9d6kApPEs-f96\\pages\\index.js": 9,
+      "static\\LdiXlXlPMY7PM-vU15q-P\\pages\\_app.js": 3,
+      "static\\LdiXlXlPMY7PM-vU15q-P\\pages\\_error.js": 4,
+      "static\\LdiXlXlPMY7PM-vU15q-P\\pages\\index.js": 5,
+      "static\\btI8klS5ArtxXoTDELkob\\pages\\_app.js": 7,
+      "static\\btI8klS5ArtxXoTDELkob\\pages\\_error.js": 8,
+      "static\\btI8klS5ArtxXoTDELkob\\pages\\index.js": 9,
+      "static\\O6fklhQTwsD5tqyjkBxqX\\pages\\_app.js": 3,
+      "static\\O6fklhQTwsD5tqyjkBxqX\\pages\\_error.js": 4,
+      "static\\O6fklhQTwsD5tqyjkBxqX\\pages\\index.js": 5,
+      "static\\beakKZ_3XJCPhYfuTxoM6\\pages\\_app.js": 7,
+      "static\\beakKZ_3XJCPhYfuTxoM6\\pages\\_error.js": 8,
+      "static\\beakKZ_3XJCPhYfuTxoM6\\pages\\index.js": 9,
+      "static\\6b2GFSfp4SKXxGYatzm-H\\pages\\_app.js": 3,
+      "static\\6b2GFSfp4SKXxGYatzm-H\\pages\\_error.js": 4,
+      "static\\6b2GFSfp4SKXxGYatzm-H\\pages\\index.js": 5,
+      "static\\Z_7vyMqhCvY2AXBLZhYHu\\pages\\_app.js": 7,
+      "static\\Z_7vyMqhCvY2AXBLZhYHu\\pages\\_error.js": 8,
+      "static\\Z_7vyMqhCvY2AXBLZhYHu\\pages\\index.js": 9,
+      "static\\8VS7VXWBlGPWWMvsvYJmR\\pages\\_app.js": 3,
+      "static\\8VS7VXWBlGPWWMvsvYJmR\\pages\\_error.js": 4,
+      "static\\8VS7VXWBlGPWWMvsvYJmR\\pages\\index.js": 5,
+      "static\\OBgbhJ5-nlx8DG74ZL0v8\\pages\\_app.js": 7,
+      "static\\OBgbhJ5-nlx8DG74ZL0v8\\pages\\_error.js": 8,
+      "static\\OBgbhJ5-nlx8DG74ZL0v8\\pages\\index.js": 9,
+      "static\\9NLFDhmP2_Ay06D0q5t8T\\pages\\_app.js": 3,
+      "static\\9NLFDhmP2_Ay06D0q5t8T\\pages\\_error.js": 4,
+      "static\\9NLFDhmP2_Ay06D0q5t8T\\pages\\index.js": 5
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  }
+}
