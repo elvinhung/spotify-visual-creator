@@ -1,6 +1,7 @@
 import React from 'react';
 import SelectionPanel from "../components/SelectionPanel";
 import TimelinePanel from "../components/TimelinePanel"
+import AnimationPanel from "../components/AnimationPanel";
 
 class Index extends React.Component {
 
@@ -24,7 +25,10 @@ class Index extends React.Component {
     console.log('rendering index');
     return (
       <div>
-        <SelectionPanel onAddItem={this.onAddItem} />
+        <div className="PanelRow">
+          <SelectionPanel onAddItem={this.onAddItem} />
+          <AnimationPanel />
+        </div>
         <TimelinePanel items={this.state.items} />
       </div>
     );

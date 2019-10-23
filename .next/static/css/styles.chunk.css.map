@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/styles.chunk.css","sources":["webpack:///./styles/SelectionPanel.scss"],"sourcesContent":[".SelectionPanel {\n  float: left;\n  width: 15%;\n  height: 600px;\n  background-color: aquamarine; }\n"],"mappings":"AAAA;AACA;AACA;AACA;AACA;;;","sourceRoot":""}

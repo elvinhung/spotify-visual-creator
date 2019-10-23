@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/SelectionPanel.scss'
 
 class SelectionPanel extends React.Component {
   constructor(props) {
@@ -7,9 +8,12 @@ class SelectionPanel extends React.Component {
 
   render() {
     return (
-      <button onClick={() => this.props.onAddItem("Square")} >
-        Square
-      </button>
+      <div className="SelectionPanel">
+        <button onClick={() => this.props.onAddItem("Square")} >
+          Square
+        </button>
+      </div>
+
     );
   }
 }
