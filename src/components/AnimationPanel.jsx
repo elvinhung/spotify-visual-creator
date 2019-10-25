@@ -6,84 +6,63 @@ class AnimationPanel extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      isPlaying: false,
+      items: this.props.items,
+    }
   }
 
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.items.length !== this.props.items.length) {
+      console.log('prevProps diff from currProps');
+      this.setState({
+        items: this.props.items,
+      });
+    }
+  }
+
+
   componentDidMount() {
-    this.isPlaying = false;
     this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
     this.mount.appendChild(this.renderer.domElement);
-    let material = new THREE.LineBasicMaterial({
-      color: 0xffffff,
-    });
 
-    let geometry = new THREE.Geometry();
-    geometry.vertices.push(
-      new THREE.Vector3( 0, -0.5, 7 ),
-      new THREE.Vector3( 0, -0.5, 0 )
-    );
+    let geometry = new THREE.BoxGeometry(1, 1, 1,);
+    let material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+    let cube = new THREE.Mesh(geometry, material);
+    this.scene.add(cube);
 
-    let angleDeltas = [];
-    let lines = [];
-    for (let i = 0; i < 20; i++) {
-      const line = new THREE.Line(geometry, material);
-      if (i < 10) {
-        line.translateY(0.1 * i);
-        line.translateX(-5);
-        angleDeltas.push(0.02);
-      } else {
-        line.translateY(0.1 * (i - 10));
-        line.translateX(5);
-        angleDeltas.push(-0.02);
-      }
-      lines.push(line);
-      this.scene.add(line);
-    }
     this.camera.position.z = 5;
     this.animate = () => {
-      if (!this.isPlaying) {
-        return;
+      console.log('animating');
+      if (this.state.isPlaying) {
+        this.camera.position.z += 0.01;
+        requestAnimationFrame(this.animate);
+        this.renderer.render(this.scene, this.camera);
       }
-      requestAnimationFrame(this.animate);
-      lines.forEach((line, index) => {
-        if (index < 10) {
-          if (line.rotation.y > 1.0) {
-            line.material.transparent = true ;
-          }
-          if (line.rotation.y < 0) {
-            angleDeltas[index] = -(angleDeltas[index]);
-          }
-        } else {
-          if (line.rotation.y > 0) {
-            angleDeltas[index] = -(angleDeltas[index]);
-          }
-          if (line.rotation.y < -1.0) {
-            line.material.transparent = true;
-          }
-        }
-
-        line.rotation.y += angleDeltas[index];
-      });
-      this.renderer.render( this.scene, this.camera );
     };
   }
 
+
   play = () => {
-    this.isPlaying = !this.isPlaying;
-    this.setState({});
-    this.animate();
+    this.setState(currentState => ({
+      isPlaying: !currentState.isPlaying,
+    }), () => {
+      this.animate();
+    });
   };
 
 
 
   render() {
+    console.log('rendering animation panel');
     return (
       <div className="AnimationPanel">
         <div ref={ref => (this.mount = ref)} />
         <button onClick={this.play}>
-          {this.isPlaying ? 'pause' : 'play'}
+          {this.state.isPlaying ? 'pause' : 'play'}
         </button>
       </div>
     );
