@@ -6,6 +6,7 @@ class AnimationPanel extends React.Component {
 
   constructor(props) {
     super(props);
+    this.sceneItems = [];
     this.state = {
       isPlaying: false,
       items: this.props.items,
@@ -17,8 +18,21 @@ class AnimationPanel extends React.Component {
       console.log('prevProps diff from currProps');
       this.setState({
         items: this.props.items,
+      }, () => {
+        const cube = this.createCube();
+        this.sceneItems = this.sceneItems.concat(cube);
+        this.scene.add(cube);
       });
     }
+  }
+
+  createCube () {
+    const geometry = new THREE.BoxGeometry(1,1,1);
+    const geo = new THREE.EdgesGeometry(geometry);
+    const mat = new THREE.LineBasicMaterial({ color: 0xffffff, linewidth: 2 });
+    let wireframe = new THREE.LineSegments(geo, mat);
+    wireframe.translateX((Math.random() * 5) - 2.5);
+    return wireframe;
   }
 
 
@@ -29,16 +43,14 @@ class AnimationPanel extends React.Component {
     this.renderer.setSize(window.innerWidth / 1.5, window.innerHeight / 1.5);
     this.mount.appendChild(this.renderer.domElement);
 
-    let geometry = new THREE.BoxGeometry(1, 1, 1,);
-    let material = new THREE.MeshBasicMaterial({color: 0x00ff00});
-    let cube = new THREE.Mesh(geometry, material);
-    this.scene.add(cube);
-
     this.camera.position.z = 5;
     this.animate = () => {
       console.log('animating');
       if (this.state.isPlaying) {
-        this.camera.position.z += 0.01;
+        this.sceneItems.forEach(item => {
+          item.rotateX(0.01);
+          item.rotateY(0.005);
+         });
         requestAnimationFrame(this.animate);
         this.renderer.render(this.scene, this.camera);
       }

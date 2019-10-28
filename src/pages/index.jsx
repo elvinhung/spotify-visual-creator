@@ -43,7 +43,7 @@ class Index extends React.Component {
       <div>
         <div className="PanelRow">
           <SelectionPanel onAddItem={this.onAddItem} />
-          <AnimationPanel items={this.state.items} />
+          <AnimationPanel items={this.state.items}  />
         </div>
         <TimelinePanel items={this.state.items} />
         <a href={spotify.AUTH_LINK}>AAUTH</a>
