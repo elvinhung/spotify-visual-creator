@@ -1,0 +1,16 @@
+.SelectionPanel {
+  width: 15%;
+  height: 600px;
+  background-color: #47576d; }
+
+.ObjectButton {
+  background-color: #47576d;
+  color: white;
+  padding: 5px;
+  margin: 2px;
+  width: 100%; }
+
+
+.PanelRow {
+  display: flex; }
+

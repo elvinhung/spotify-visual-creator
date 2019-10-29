@@ -54,12 +54,16 @@
     "byIdentifier": {
       "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/SelectionPanel.scss 0": 0,
       "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/AnimationPanel.scss 0": 1,
-      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/Index.scss 0": 2
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/Index.scss 0": 2,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss 0": 3,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss 1": 4
     },
     "usedIds": {
       "0": 0,
       "1": 1,
-      "2": 2
+      "2": 2,
+      "3": 3,
+      "4": 4
     }
   },
   "chunks": {
@@ -265,17 +269,85 @@
       "static\\pi-RTgRU-WbJgv5yj9Ep-\\pages\\index.js": 5,
       "static\\czGKVpIwYUDReri7ZwgWe\\pages\\_app.js": 7,
       "static\\czGKVpIwYUDReri7ZwgWe\\pages\\_error.js": 8,
-      "static\\czGKVpIwYUDReri7ZwgWe\\pages\\index.js": 9
+      "static\\czGKVpIwYUDReri7ZwgWe\\pages\\index.js": 9,
+      "static\\xV983xqh4A4fn9s4bNG8u\\pages\\_app.js": 3,
+      "static\\xV983xqh4A4fn9s4bNG8u\\pages\\_error.js": 4,
+      "static\\xV983xqh4A4fn9s4bNG8u\\pages\\index.js": 5,
+      "static\\iiGm1MxcAmYWyTdGrPUxn\\pages\\_app.js": 7,
+      "static\\iiGm1MxcAmYWyTdGrPUxn\\pages\\_error.js": 8,
+      "static\\iiGm1MxcAmYWyTdGrPUxn\\pages\\index.js": 9,
+      "static\\G0eEz3BoVPi5UYWfbsp7a\\pages\\_app.js": 3,
+      "static\\G0eEz3BoVPi5UYWfbsp7a\\pages\\_error.js": 4,
+      "static\\G0eEz3BoVPi5UYWfbsp7a\\pages\\index.js": 5,
+      "static\\IjOvhWgNGrloc_aPGNCQU\\pages\\_app.js": 7,
+      "static\\IjOvhWgNGrloc_aPGNCQU\\pages\\_error.js": 8,
+      "static\\IjOvhWgNGrloc_aPGNCQU\\pages\\index.js": 9,
+      "static\\cnrbtVT9a9qxv4-ejsrZt\\pages\\_app.js": 3,
+      "static\\cnrbtVT9a9qxv4-ejsrZt\\pages\\_error.js": 4,
+      "static\\cnrbtVT9a9qxv4-ejsrZt\\pages\\index.js": 5,
+      "static\\cWICUCXjBmBZrSIOV2TGV\\pages\\_app.js": 7,
+      "static\\cWICUCXjBmBZrSIOV2TGV\\pages\\_error.js": 8,
+      "static\\cWICUCXjBmBZrSIOV2TGV\\pages\\index.js": 9,
+      "static\\lNGffvOshgWgKx0j5z1s_\\pages\\_app.js": 3,
+      "static\\lNGffvOshgWgKx0j5z1s_\\pages\\_error.js": 4,
+      "static\\lNGffvOshgWgKx0j5z1s_\\pages\\index.js": 5,
+      "static\\tXfNruzmHkG4ueWKbM6Dl\\pages\\_app.js": 7,
+      "static\\tXfNruzmHkG4ueWKbM6Dl\\pages\\_error.js": 8,
+      "static\\tXfNruzmHkG4ueWKbM6Dl\\pages\\index.js": 9,
+      "static\\qD8Eb7iMsfdyrm1-CctU9\\pages\\_app.js": 3,
+      "static\\qD8Eb7iMsfdyrm1-CctU9\\pages\\_error.js": 4,
+      "static\\qD8Eb7iMsfdyrm1-CctU9\\pages\\index.js": 5,
+      "static\\CYwppc4ZxDWDCFb_X9WEQ\\pages\\_app.js": 7,
+      "static\\CYwppc4ZxDWDCFb_X9WEQ\\pages\\_error.js": 8,
+      "static\\CYwppc4ZxDWDCFb_X9WEQ\\pages\\index.js": 9,
+      "static\\xQQ_5ZIz7dFSbByH4zWVe\\pages\\_app.js": 3,
+      "static\\xQQ_5ZIz7dFSbByH4zWVe\\pages\\_error.js": 4,
+      "static\\xQQ_5ZIz7dFSbByH4zWVe\\pages\\index.js": 5,
+      "static\\-TzV6DfldKm9ZyxWQACm8\\pages\\_app.js": 7,
+      "static\\-TzV6DfldKm9ZyxWQACm8\\pages\\_error.js": 8,
+      "static\\-TzV6DfldKm9ZyxWQACm8\\pages\\index.js": 9,
+      "static\\414CXIXT25RxxCnwgX1X1\\pages\\_app.js": 3,
+      "static\\414CXIXT25RxxCnwgX1X1\\pages\\_error.js": 4,
+      "static\\414CXIXT25RxxCnwgX1X1\\pages\\index.js": 5,
+      "static\\D-l-3ZvgLAAY-YFYvGw74\\pages\\_app.js": 7,
+      "static\\D-l-3ZvgLAAY-YFYvGw74\\pages\\_error.js": 8,
+      "static\\D-l-3ZvgLAAY-YFYvGw74\\pages\\index.js": 9,
+      "static\\xtV6Fhr1AJdenbZZV_myY\\pages\\_app.js": 3,
+      "static\\xtV6Fhr1AJdenbZZV_myY\\pages\\_error.js": 4,
+      "static\\xtV6Fhr1AJdenbZZV_myY\\pages\\index.js": 5,
+      "static\\X9d0pOJ5Zh3o0mbz9qewU\\pages\\_app.js": 7,
+      "static\\X9d0pOJ5Zh3o0mbz9qewU\\pages\\_error.js": 8,
+      "static\\X9d0pOJ5Zh3o0mbz9qewU\\pages\\index.js": 9,
+      "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\_app.js": 3,
+      "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\_error.js": 4,
+      "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\index.js": 5
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
       2,
-      6,
-      7,
-      8,
-      9
+      3,
+      4,
+      5,
+      6
     ]
-  }
+  },
+  "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ]
 }

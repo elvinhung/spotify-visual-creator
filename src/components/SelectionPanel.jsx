@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/SelectionPanel.scss'
+import ObjectButton from '../ui-components/ObjectButton'
 
 class SelectionPanel extends React.Component {
   constructor(props) {
@@ -9,9 +10,9 @@ class SelectionPanel extends React.Component {
   render() {
     return (
       <div className="SelectionPanel">
-        <button onClick={() => this.props.onAddItem("Square")} >
-          Square
-        </button>
+        <ObjectButton addItem={this.props.addItem} type="Sphere"/>
+        <ObjectButton addItem={this.props.addItem} type="Cube"/>
+        <ObjectButton addItem={this.props.addItem} type="Cone"/>
       </div>
 
     );

@@ -16,7 +16,7 @@ class Index extends React.Component {
     }
   }
 
-  onAddItem = item => {
+  addItem = item => {
     this.setState(state => {
       const newItems = state.items.concat(item);
       return {
@@ -42,7 +42,7 @@ class Index extends React.Component {
     return (
       <div>
         <div className="PanelRow">
-          <SelectionPanel onAddItem={this.onAddItem} />
+          <SelectionPanel addItem={this.addItem} />
           <AnimationPanel items={this.state.items}  />
         </div>
         <TimelinePanel items={this.state.items} />
