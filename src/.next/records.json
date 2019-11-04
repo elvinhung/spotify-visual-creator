@@ -56,14 +56,20 @@
       "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/AnimationPanel.scss 0": 1,
       "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/Index.scss 0": 2,
       "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss 0": 3,
-      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss 1": 4
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss 1": 4,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/TimelinePanel.scss 0": 5,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/TimelineItem.scss 0": 6,
+      "css ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/TimelineItem.scss 1": 7
     },
     "usedIds": {
       "0": 0,
       "1": 1,
       "2": 2,
       "3": 3,
-      "4": 4
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7
     }
   },
   "chunks": {
@@ -320,20 +326,69 @@
       "static\\X9d0pOJ5Zh3o0mbz9qewU\\pages\\index.js": 9,
       "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\_app.js": 3,
       "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\_error.js": 4,
-      "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\index.js": 5
+      "static\\t_yHBs9T_NyTfIeMeKqS_\\pages\\index.js": 5,
+      "static\\SoxwTp0Q7dZ6kl8tMR6kh\\pages\\_app.js": 7,
+      "static\\SoxwTp0Q7dZ6kl8tMR6kh\\pages\\_error.js": 8,
+      "static\\SoxwTp0Q7dZ6kl8tMR6kh\\pages\\index.js": 9,
+      "static\\A3IF49VBDbyWGiFf8-GdE\\pages\\_app.js": 3,
+      "static\\A3IF49VBDbyWGiFf8-GdE\\pages\\_error.js": 4,
+      "static\\A3IF49VBDbyWGiFf8-GdE\\pages\\index.js": 5,
+      "static\\Tvx37QO_DlJTgCF4mF6HN\\pages\\_app.js": 7,
+      "static\\Tvx37QO_DlJTgCF4mF6HN\\pages\\_error.js": 8,
+      "static\\Tvx37QO_DlJTgCF4mF6HN\\pages\\index.js": 9,
+      "static\\_RP7f_JbcnzhWLzywCf86\\pages\\_app.js": 3,
+      "static\\_RP7f_JbcnzhWLzywCf86\\pages\\_error.js": 4,
+      "static\\_RP7f_JbcnzhWLzywCf86\\pages\\index.js": 5,
+      "static\\nXEEEcBu-503N1HymfMyR\\pages\\_app.js": 7,
+      "static\\nXEEEcBu-503N1HymfMyR\\pages\\_error.js": 8,
+      "static\\nXEEEcBu-503N1HymfMyR\\pages\\index.js": 9
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
       2,
-      3,
-      4,
-      5,
-      6
+      6,
+      7,
+      8,
+      9
     ]
   },
   "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/ObjectButton.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/TimelinePanel.scss": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin ../node_modules/@zeit/next-css/node_modules/css-loader/index.js??ref--5-1!../node_modules/sass-loader/lib/loader.js??ref--5-2!styles/TimelineItem.scss": [
     {
       "modules": {
         "byIdentifier": {},

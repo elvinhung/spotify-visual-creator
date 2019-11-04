@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import SelectionPanel from "../components/SelectionPanel";
 import TimelinePanel from "../components/TimelinePanel"
 import AnimationPanel from "../components/AnimationPanel";
@@ -41,6 +42,16 @@ class Index extends React.Component {
     console.log('rendering index');
     return (
       <div>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta charSet="utf-8" />
+        </Head>
+        <style jsx global>{`
+          body { 
+            margin: 0;
+            position: fixed;
+          }
+        `}</style>
         <div className="PanelRow">
           <SelectionPanel addItem={this.addItem} />
           <AnimationPanel items={this.state.items}  />

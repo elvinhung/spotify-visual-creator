@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/TimelinePanel.scss'
+import TimelineItem from "../ui-components/TimelineItem";
 
 class TimelinePanel extends React.Component {
   constructor(props) {
@@ -8,9 +10,9 @@ class TimelinePanel extends React.Component {
   render() {
     console.log('rendering timeline');
     return (
-      <div>
+      <div className="TimelinePanel">
         {this.props.items.map(item => (
-          <div>{item}</div>
+          <TimelineItem type={item} />
         ))}
       </div>
     );
